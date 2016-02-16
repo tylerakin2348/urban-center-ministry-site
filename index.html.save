@@ -5,14 +5,12 @@
     <title>Dehoney Center</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
     <header class="top-header">
       <a href="index.html">
         <img class="logo" src="img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo"</img>
       </a>
-      <button>Navigation</button>
       <nav class="main-navigation">
         <ul class="menu">
           <li><a href="#about-header">About</a></li>
@@ -23,8 +21,8 @@
         </ul>
       </nav>
     </header>
-    <div class="home-picture">
-      <img class="homepage-pic"src="img2/photo-1441960114565-066d7a7b544b.jpg" alt="City" />
+    <div>
+      <img class="homepage-pic"src="/Users/Tyler/Downloads/Tyler Akin Site/Urban Ministry Site/img/photo-1441960114565-066d7a7b544b.jpg" alt="City" />
     </div>
     <div>
       <section>
@@ -41,23 +39,23 @@
         <h1 id="resource-header">Resources</h1>
         <p class="main-text">We have many resources related to missions, relating to urban missions in particualr, and specific people groups. <br />
         Use the search bar to search for a particular subject, or browse our entire library here.</p>
-        <input id="search" type="search" placeholder="Search"></span>
+        <p class="main-text">Search</p>
+        <input id="search" type="search"></span>
+      </section>
+      <section>
+        <h1 id="journal-header">Journal</h1>
+        <p class="main-text">Our contributors post gospel-motivated posts here.</p>
       </section>
       <h1 id="contact-header">Contact Us</h1>
       <section class="contact">
       </section>
       <section class="contact-overlay">
-          <p>Contact us for more information about our work, or about our Training and Internships.</p>
-      </section>
-      <section>
-        <p>We are passionate about the gospel going forth in our city and others around the world</p>
+          <p>We are passionate about the gospel going forth in our city and others around the world! <br />Contact us for more information about our work, or about our Training and Internships.</p>
       </section>
     </div>
-    <img class="sbts-logo" src="img/SBTS-Logo.png"/>
     <footer class="foot">
     © 2016 The Southern Baptist Theological Seminary
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="javascript/script.js"></script>
   </body>
   </html>
