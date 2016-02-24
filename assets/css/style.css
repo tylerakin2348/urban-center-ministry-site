@@ -3,7 +3,6 @@ body {
   font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,"Times New Roman",Times,serif;
   position: relative;
   text-align: center;
-  color:red;
 }
 header {
   position: absolute;
@@ -36,6 +35,12 @@ button {
   overflow: hidden;
   outline: inherit;
 }
+button:hover {
+  border-color: #333;
+}
+button:visited {
+  border-color: #333;
+}
 .logo {
   margin-left: 35px;
   margin-right: 85px;
@@ -58,17 +63,19 @@ button {
   border-bottom: 1px solid grey;
 }
 .main-navigation {
-  display: center;
+  display: none;
   color: black;
   align-content: right;
   margin: 0 0 0 0;
   overflow: hidden;
+  background-color: #d2002a;
 }
 .menu {
   display: none;
-  /*margin: 133px 140px 50px 133px;*/
-  padding: 20px 50px 0px 50px;
-  float: right;
+  margin: 33px 140px 50px 100px;
+  padding-bottom: 10px;
+  float: center;
+  display: block;
   list-style: none;
 }
 .foot {
@@ -111,10 +118,12 @@ button {
   max-width: 100%;
   min-height: 400px;
   background-image: image(img2/photo-1441960114565-066d7a7b544b.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
   overflow: hidden;
 }
 .homepage-pic {
-  width: 10;
   height: 10%;
   min-height: 300px;
   min-width: 700px;

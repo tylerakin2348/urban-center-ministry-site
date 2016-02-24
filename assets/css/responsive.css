@@ -21,22 +21,23 @@
 
 @media screen and (min-width: 614px) {
 
-  .top-header {
+.top-header {
     width: 100%;
   }
-
-  .logo {
-  width: 300px;
-  height: 205px;
-  margin: -50px -70px -40px -150px;
-  padding-top: 50px;
-  padding-left: 0px;
-  padding-right: -40px;
+.logo {
+    margin: 0px auto;
+    width: 300px;
+    height: 205px;
+    display: inline;
+  }
+.main-navigation {
+  max-width: 100%;
 }
 .menu {
   display: inline;
-  float: center;
-  padding-left: 10px;
+  float: left;
+  padding: 0px auto;
+  margin: 0px auto;
 }
 button {
   display: none;
@@ -208,6 +209,13 @@ button {
   .logo {
     width: 300px;
     height: 205px;
-    margin: -10px -40px;
+    margin: -40px -70px;
+  }
+  .main-navigation {
+    color: black;
+    display: inline;
+    margin: 0 0 0 0;
+    padding-left: 50px;
+    overflow: hidden;
   }
 }
