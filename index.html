@@ -12,23 +12,43 @@
       <a href="index.html">
         <img class="logo" src="assets/img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo"</img>
       </a>
-      <button>Navigation</button>
+      <button class="navButton">Navigation</button>
       <nav class="main-navigation">
         <ul class="menu">
           <li><a href="#about-header">About</a></li>
           <li><a href="#contact-header">Contact Us</a></li>
           <li><a href="#resource-header">Resources</a></li>
           <li><a href="#journal-header">Journal</a></li>
-          <li><a href="#training-header">Training and Internships</a></li>
+          <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
+        </ul>
+      </nav>
+    </header>
+    <header class="topHeaderScroll">
+      <a href="index.html">
+        <img class="logoScroll" src="assets/img/Dehoney Center Logo2small.png"</img>
+      </a>
+      <button class="navButton">Navigation</button>
+      <nav class="mainNavigationScroll">
+        <ul class="menu">
+          <li><a href="#about-header">About</a></li>
+          <li><a href="#contact-header">Contact Us</a></li>
+          <li><a href="#resource-header">Resources</a></li>
+          <li><a href="#journal-header">Journal</a></li>
+          <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
         </ul>
       </nav>
     </header>
     <div class="home-picture">
       <img class="homepage-pic"src="assets/img2/photo-1441960114565-066d7a7b544b.jpg" alt="City" />
     </div>
-    <div>
+    <div class="pageContent">
       <section>
         <h1 id="about-header">About</h1>
+        <section class="contact">
+        </section>
+        <section class="contact-overlay">
+            <p></p>
+        </section>
         <p class="main-text">The Dehoney Center, in partnership with the Southern Baptist Theological Seminary, offers training in urban ministry and mission for every level of involvement and education.  From Boyce College undergraduate degrees to doctoral programs, we have something to sharpen your ministry.</p>
       </section>
       <h1 id="training-header">Training and Internships</h1>
@@ -39,25 +59,49 @@
       </section>
       <section>
         <h1 id="resource-header">Resources</h1>
-        <p class="main-text">We have many resources related to missions, relating to urban missions in particualr, and specific people groups. <br />
-        Use the search bar to search for a particular subject, or browse our entire library here.</p>
-        <input id="search" type="search" placeholder="Search"></span>
+        <p class="main-text">We have many resources related to missions, relating to urban missions in particualar, and specific people groups. <br />
+        Use the search bar to search for a particular subject, or browse our entire library.</p>
+          <input id="search" type="search" placeholder="Search"></input>
+        <form action="resources.html" id="searchButtons"><input type="submit" value="Browse Resources"></form>
+        <!-- <button id="searchButton" href="file:///Users/Tyler/Desktop/urban-center-ministry-site/resources.html?">Browse Resources</button> -->
+          <p class="search-overlay">Results matching search</p>
+
       </section>
       <h1 id="contact-header">Contact Us</h1>
-      <section class="contact">
-      </section>
-      <section class="contact-overlay">
-          <p>Contact us for more information about our work, or about our Training and Internships.</p>
-      </section>
       <section>
         <p>We are passionate about the gospel going forth in our city and others around the world</p>
       </section>
+      <p>
+        Contact us for more information about our work, or about our Training and Internships.
+      </p>
+      <span>
+        <form class="contactForm" action="contact.html" method="post">
+          <li>
+             <label>Name</label>
+             <input type="text" title="Name" />
+          </li>
+          <li>
+             <label>Email</label>
+             <input type="text" title="Email" />
+          </li>
+          <li>
+             <label>Phone</label>
+             <input type="text" title="Phone" />
+          </li>
+          <li>
+             <label>Message</label>
+             <textarea type="text" title="Message"></textarea>
+          </li>
+          <input type="submit" id="contactSubmitButton"></input>
+        </form>
+      </span>
     </div>
     <img class="sbts-logo" src="assets/img/SBTS-Logo.png"/>
     <footer class="foot">
     © 2016 The Southern Baptist Theological Seminary
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="data.js"></script>
     <script src="assets/javascript/script.js"></script>
   </body>
   </html>

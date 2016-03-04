@@ -1,43 +1,37 @@
-@media screen and (min-width: 214px) {
-  .logo {
-    margin-left: 35px;
-    margin-right: 85px;
-    width: 300px;
-    height: 205px;
-    display: inline;
-    float: center;
-  }
-  /*.top-header {
-    max-height: 250px;
-  }*/
-  .homepage-pic {
-    position: relative;
-  }
-  button {
-    display: inline;
-    float: center;
-  }
-}
-
 @media screen and (min-width: 614px) {
 
 .top-header {
     width: 100%;
+    /*margin: 0px -100px 0px -100px;*/
+    padding: 0px -100px 0px -100px;
   }
-.logo {
-    margin: 0px auto;
-    width: 300px;
-    height: 205px;
+  .logo {
+    margin-left: -20px;
+    margin-right: 85px;
+    width: 200px;
+    height: 140px;
     display: inline;
+    position: relative;
+    float: left;
   }
 .main-navigation {
+  display: inline;
+  float: right;
+  margin: -94px 30px 0px 100px;
+  padding: 0;
   max-width: 100%;
+  background-color: #fff;
 }
 .menu {
   display: inline;
-  float: left;
-  padding: 0px auto;
-  margin: 0px auto;
+  float: right;
+  position: relative;
+  margin: 50px -1px 0px 100px;
+  font-size: 1.3em;
+}
+.menu li a:hover {
+  color: #d2002a;
+  border-radius: 3px;
 }
 button {
   display: none;
@@ -47,20 +41,40 @@ button {
   }
 }
 
-@media screen and (mix-width: 800px) {
-  .logo {
-    margin-left: 35px;
-    margin-right: 85px;
-    width: 300px;
-    height: 205px;
-    display: inline;
-  }
+@media screen and (min-width: 800px) {
   .top-header {
-    max-height: 250px;
-  }
-  main-navigation {
+      width: 100%;
+      /*margin: 0px -100px 0px -100px;*/
+      padding: 0px -100px 0px -100px;
+    }
+    .logo {
+      margin-left: -20px;
+      margin-right: 85px;
+      width: 200px;
+      height: 140px;
+      display: inline;
+      position: relative;
+      float: left;
+    }
+  .main-navigation {
     display: inline;
     float: right;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    background-color: #fff;
+  }
+  .menu {
+    display: inline;
+    float: right;
+    padding-right: -10px;
+    margin: 97px 20px 9px 95px;
+    position: relative;
+    font-size: 1.3em;
+  }
+  .menu li a:hover {
+    color: #d2002a;
+    border-radius: 3px;
   }
   button {
     display: none;
@@ -68,45 +82,35 @@ button {
 }
 
 @media screen and (min-width: 1000px) {
-  body {
-    background: white;
-    font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,"Times New Roman",Times,serif;
-  }
-
-  .logo {
-    width: 300px;
-    height: 205px;
-    margin: -10px -40px;
-  }
-  .class {
-    background-color: red;
-  }
   .top-header {
-    margin: 0px;
-    margin-right: -40px;
-    /*margin-bottom: 70px;*/
-    background-color: white;
-    display: block;
-    position: fixed;
-    padding-bottom: -50px;
-    z-index: 1;
-    border-bottom: 1px solid grey;
-    max-height: 250px;
-  }
+      width: 100%;
+      /*margin: 0px -100px 0px -100px;*/
+      padding: 0px -100px 0px -100px;
+    }
+    .logo {
+      margin-left: -20px;
+      margin-right: 85px;
+      width: 200px;
+      height: 140px;
+      display: inline;
+      position: relative;
+      float: left;
+    }
   .main-navigation {
     display: inline;
-    color: blue;
-    align-content: right;
-    margin: 0 0 0 0;
+    float: right;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    background-color: #fff;
   }
   .menu {
     display: inline;
-    margin: 133px 140px 50px 133px;
-    padding: 20px 50px 0px 50px;
     float: right;
-    list-style: none;
+    padding: 0px;
+    margin: 97px 20px 12px 95px;
+    position: relative;
   }
-
   .menu li {
     float: left;
   }
@@ -116,7 +120,8 @@ button {
   }
   .menu li a {
     display: inline;
-    padding: 14px;
+    padding: 100px 10px 0 14px;
+    margin: 100px 14px 100px 14px;
     text-decoration: none;
     font-size: 15px;
     color: #333;
@@ -132,8 +137,8 @@ button {
   .homepage-pic {
     width: 100%;
     height: 100%;
-    margin-top: 200px;
-    margin-bottom: -40px;
+    margin-top: 140px;
+    margin-bottom: -100px;
     /*margin: 200px 0;*/
     overflow: hidden;
   }
@@ -159,7 +164,7 @@ button {
     font-size: 1.5em;
     line-height: 1.3;
     opacity: 0.9;
-    z-index: -1;
+    z-index: 0;
   }
   .contact-overlay {
     display: inline;
@@ -176,12 +181,11 @@ button {
     line-height: 1.3;
     opacity: 0.9;
   }
-  #contact-header {
+  /*#contact-header {
     text-align: center;
     /*border-top: 1px solid #333;
     border-bottom: 1px solid #333;*/
-    padding: 15px 15px;
-    margin-top: 50px;
+    padding: 200px 50px 50px 50px;
   }
   #training-header {
     text-align: center;
@@ -194,28 +198,12 @@ button {
     text-align: center;
     /*border-top: 1px solid #333;
     border-bottom: 1px solid #333;*/
-    padding: 15px 15px;
+    padding: 170px 50px 50px 50px;
     margin-top: 100px;
   }
   #resource-header {
     text-align: center;
     /*border-top: 1px solid #333;
     border-bottom: 1px solid #333;*/
-    padding: 15px 15px;
-    margin-top: 100px;
-  }
-
-@media screen and (min-width: 1133px) {
-  .logo {
-    width: 300px;
-    height: 205px;
-    margin: -40px -70px;
-  }
-  .main-navigation {
-    color: black;
-    display: inline;
-    margin: 0 0 0 0;
-    padding-left: 50px;
-    overflow: hidden;
-  }
-}
+    padding: 170px 50px 50px 50px;
+  }*/

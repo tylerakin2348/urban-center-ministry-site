@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Dehoney Center</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
   </head>
   <body>
     <header class="top-header">
       <a href="index.html">
-        <img class="logo" src="img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo"</img>
+        <img class="logo" src="assets/img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo"</img>
       </a>
+      <button id="navButton">Navigation</button>
       <nav class="main-navigation">
         <ul class="menu">
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact-header">Training and Internships</a></li>
+          <li><a href="#about-header">About</a></li>
           <li><a href="#contact-header">Contact Us</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="journal.html">Journal</a></li>
+          <li><a href="#resource-header">Resources</a></li>
+          <li><a href="#journal-header">Journal</a></li>
+          <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
         </ul>
       </nav>
     </header>
@@ -55,6 +57,12 @@ Internships along with classroom instruction are the best ways to prepare for ur
 Over the next few months, our writers will expand on this theme of “training for the city, in the city.”  If you’re working in an urban context, I’d love to get your feedback.  You can email me at urbantraining@sbts.edu.  If you’re a student, consider one of the urban internships by visiting Training and Internships.
         </p>
       </section>
-      <footer>© 2016 The Southern Baptist Theological Seminary</footer>
-    </div>
-  </body>
+      <img class="sbts-logo" src="assets/img/SBTS-Logo.png"/>
+      <footer class="foot">
+      © 2016 The Southern Baptist Theological Seminary
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="data.js"></script>
+      <script src="assets/javascript/script.js"></script>
+    </body>
+    </html>
