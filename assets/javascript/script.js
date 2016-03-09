@@ -1,11 +1,39 @@
 var searchValue = $("#search").val();
 
 // Navigation Menu Functionality
-$(".topHeaderScroll").hide();
+var scrollStatus = false;
+
 $(window).scroll(function() {
-  $(".top-header").hide();
-  $(".topHeaderScroll").show();
+
+  var top = $(window).scrollTop(),
+      logoCon = $('.logo-container'),
+      logo = $('.logo');
+
+  if(scrollStatus && top == 0)
+  {
+    scrollStatus = false;
+    logo.animate({
+      height:120
+    }, 200);
+    logoCon.animate({
+      height: 164,
+      marginTop:0
+    }, 200);
+  }
+
+  if(!scrollStatus && top > 0)
+  {
+    scrollStatus = true;
+    logo.animate({
+      height:100
+    }, 200);
+    logoCon.animate({
+      height: 75,
+      marginTop:-8
+    }, 200);
+  }
 });
+
 
 $(".navButton").click(function() {
   if ( $(".main-navigation").is(":hidden") ) {
@@ -26,24 +54,48 @@ $(".navButton").click(function() {
 //Search Form Request
 $( "#search" ).keyup(function() {
   searchValue = $("#search").val();
-    var found = $.grep(data.resources, function(resource) {
-        return resource.author === searchValue;
+    var found = $.grep(data.author, function(resource) {
+        return data.author === searchValue;
     });
-    if(response != ''){
+    if(searchValue = data.author ){
       $(".search-overlay").show();
+    } else  {
+      $(".search-overlay").hide();
     }
   });
 
   //Contact Form Submit Request
-  $("#contactSubmitButton").click(function( submit ) {
-    submit.preventDefault();
-    $.get()
-  });
+  $(function() {
+    // submit.preventDefault();
+    var contactValue = $(".contactForm");
+    var formData = $("formData");
+    var formDataList = "";
+    $("form").submit(function(event) {
+      // Stop the browser from submitting the form.
+      event.preventDefault();
+      var formDataList = $("form").serialize();
+    });
+    $.ajax({
+      type: "POST",
+      url: $("form").attr("action"),
+      data: "formDataList"
+    })
+    .done(function() {
+      //alert(formDataList.author);
+    })
+});
 
-  $.getJSON("https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/data.json", function( response ) {
-    var data;
-    data = rsesponse;
-  });
+
+
+  //   var data = {
+  //
+  //   }
+  //   $.get("https://github.com/tylerakin2348/urban-center-ministry-site/blob/master/contactInfo.json", contactSubmitButton, "Success")
+  //
+  // $.getJSON("https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/data.json", function( response ) {
+  //   var data;
+  //   data = rsesponse;
+  // });
 
 
 
