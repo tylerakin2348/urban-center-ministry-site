@@ -1,3 +1,11 @@
+/* Universal Styles
+----------------------------------------------- */
+
+* { box-sizing:border-box; }
+
+/* General Body Styles
+----------------------------------------------- */
+
 body {
   background: white;
   font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,"Times New Roman",Times,serif;
@@ -6,20 +14,18 @@ body {
 }
 header {
   position: absolute;
-  overflow: hidden;
-}
-.contact-overlay, .training-overlay p {
-  text-align: center;
-  margin: 0 25px;
-  color: white;
-  border-radius: 4px;
-  font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
 }
 .main-text {
   color: 333;
   padding-bottom: 100px;
 }
+
+/* General Element Styles
+----------------------------------------------- */
+
 h1 {
+  text-align: center;
+  padding: 15px 15px;
   margin: 15px 0 15px;
 }
 button {
@@ -36,30 +42,18 @@ button {
   overflow: hidden;
   outline: inherit;
 }
-button:hover {
-  color: #333;
-  border-color: #333;
+.main-page-text {
+  color: #333
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 1.2em;
+  line-height: 1.3em;
 }
-button:visited {
-  border-color: #333;
-}
-/*button #navButtonScroll {
-  color: #d2002a;
-  background-color: white;
-  border: 1px solid #d2002a;
-  border-radius: 4px;
-  padding-left: 140px;
-  padding-right: 40px;
-  margin: 180px 30px -50px -85px;
-  display: inline;
-  opacity: .7;
-  float: center;
-  overflow: hidden;
-  outline: inherit;
-}*/
-.class {
-  background-color: red;
-}
+
+/* Body Element Styles
+----------------------------------------------- */
+
 .top-header {
   margin: 0px -40px 0px 0px;
   background-color: white;
@@ -67,38 +61,38 @@ button:visited {
   position: fixed;
   z-index: 1;
   border-bottom: 1px solid #333;
+  box-shadow: 0 0 .5px rgba(0, 0, 0, 0.9);
   width: 100%;
 }
-.topHeaderScroll {
-  margin: 0px -40px 0px 0px;
-  background-color: white;
-  display: block;
-  position: fixed;
-  z-index: 1;
-  border-bottom: 1px solid #333;
-  width: 100%;
+
+/* Logo Positioning */
+.logo-container {
+    float: left;
+    overflow: hidden;
+    padding: 20px;
+    position: fixed;
+    background: #fff;
+    margin-left: 20px;
+}
+.logo-container:after {
+    content: "";
+    width: 172px;
+    position: absolute;
+    top: 76px;
+    left: 0px;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+    border-bottom:1px solid #333;
+    height: 87px;
 }
 .logo {
-  margin-left: -20px;
-  margin-right: 85px;
-  width: 200px;
-  height: 140px;
-  display: inline;
-  position: relative;
-  float: left;
+  height: 120px;
 }
-.logoScroll {
-  margin-left: 20px;
-  margin-right: 85px;
-  width: 100px;
-  height: 70px;
-  display: inline;
-  position: relative;
-  float: left;
-}
+
+/* Menu Styles */
 .main-navigation {
   display: none;
-  float: left;
+  float: right;
   margin: 0px 50px 0px 0px;
   padding-right: 25px;
   color: black;
@@ -108,7 +102,6 @@ button:visited {
 }
 .menu {
   display: inline;
-  font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,"Times New Roman",Times,serif;
   font-weight: 300;
   margin: 33px -10px 30px -10px;
   padding-bottom: -80px;
@@ -117,55 +110,45 @@ button:visited {
   z-index: 2;
 }
 .menu li {
-  padding-bottom: 10px;
-}
-.foot {
-  font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,"Times New Roman",Times,serif;
-  font-size: .75em;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  text-align: center;
-  overflow: hidden;
-}
-.sbts-logo {
-  width: 280px;
-  height: 50px;
-  margin-bottom: -40px;
-  margin-top: 50px;
-}
-.menu li {
   float: left;
 }
-.menu li a:hover {
-  color: #d2002a;
-  border-radius: 3px;
-}
 .menu li a {
-  display: inline;
-  padding: 14px;
-  text-decoration: none;
-  font-size: 15px;
-  color: #333;
+    float: left;
+    display: inline-block;
+    padding: 29px 24px 30px 24px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #333;
 }
-.main-text {
-  color: #333
-  margin-top: 50px;
-  margin-left: 100px;
-  margin-right: 100px;
-  font-size: 1.2em;
-  line-height: 1.3em;
+#trainLink {
+  display: none;
+  text-align: center;
+  margin-left: 75px;
 }
+
+/* Main Page Photo */
 .homepage-pic {
   height: 100%;
-  background-image: image(img2/photo-1441960114565-066d7a7b544b.jpg);
-  background-size: contain;
+  background-image: src= "assets/img2/photo-1441960114565-066d7a7b544b.jpg"
   border-radius: 4px;
   min-height: 300px;
   min-width: 700px;
-  margin-top: 140px;
+  margin-top: 104px;
   margin-bottom: -40px;
   /*margin: 200px 0;*/
   overflow: hidden;
+}
+
+/* Primary Sections of Page */
+.about {
+  background-image: url(http://www.sbts.edu/wp-content/uploads/2015/02/More-about-Southern.jpg);
+  background-color: #d2002a;
+  background-position: 50% 5%;
+  color: #333;
+  padding: 200px;
+  margin: 50px 0;
+  border-radius: 13px;
+  max-width: 100%
 }
 .training {
   background-image: url(https://images.unsplash.com/photo-1443827187138-4e5e4e5ba78f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=465dd95097b5867a811e0ab0e48b4355);
@@ -176,14 +159,22 @@ button:visited {
   border-radius: 13px;
   max-width: 75%;
 }
-.contact {
-  background-image: url(http://www.sbts.edu/wp-content/uploads/2015/02/More-about-Southern.jpg);
+
+/* Overlays for Primary Sections */
+.contact-overlay {
+  display: inline;
   background-color: #d2002a;
-  color: #333;
-  padding: 200px;
-  margin: 50px 0;
-  border-radius: 13px;
-  max-width: 100%
+  float: right;
+  margin: -460px 150px 0px 700px;
+  padding-bottom: 52px;
+  padding-top: 75px;
+  padding-left: 35px;
+  padding-right: 35px;
+  box-shadow: 1px 1px 1px .5px #888888;
+  border-radius: 5px;
+  font-size: 1.3em;
+  line-height: 1.3;
+  opacity: 0.9;
 }
 .training-overlay {
   display: inline;
@@ -199,73 +190,31 @@ button:visited {
   opacity: 0.9;
   z-index: 0;
 }
-.search-overlay {
-  display: none;
-  background-color: #d2002a;
-  float: center;
-  /*margin: 0px, 350px, 300px, 500px;*/
-  /*padding-bottom: 0px, 35px, 0px, 35px;*/
-  box-shadow: 1px 1px 1px .5px #888888;
-  border-radius: 5px;
-  font-size: 1.3em;
-  line-height: 1.3em;
-  opacity: .9;
-  z-index: -1;
-}
-.contact-overlay {
-  display: inline;
-  background-color: #d2002a;
-  float: right;
-  margin-top: -460px;
-  margin-left: 700px;
-  margin-right: 150px;
-  padding-bottom: 52px;
-  padding-top: 75px;
-  padding-left: 35px;
-  padding-right: 35px;
-  box-shadow: 1px 1px 1px .5px #888888;
-  border-radius: 5px;
-  font-size: 1.3em;
-  line-height: 1.3;
-  opacity: 0.9;
-}
-#contact-header {
+.contact-overlay, .training-overlay p {
   text-align: center;
-  /*border-top: 1px solid #333;
-  border-bottom: 1px solid #333;*/
-  padding: 15px 15px;
-  margin-top: 50px;
-}
-#training-header {
-  text-align: center;
-  /*border-top: 1px solid #333;
-  border-bottom: 1px solid #333;*/
-  padding: 15px 15px;
-  margin-top: 50px;
-}
-#about-header {
-  text-align: center;
-  /*border-top: 1px solid #333;
-  border-bottom: 1px solid #333;*/
-  padding: 170px 50px 50px 50px;
-  margin-top: 80px;
-}
-#resource-header {
-  text-align: center;
-  /*border-top: 1px solid #333;
-  border-bottom: 1px solid #333;*/
-  padding: 15px 15px;
-  margin-top: 100px;
+  margin: 0 25px;
+  color: white;
+  border-radius: 4px;
+  font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
 }
 
-#journal-header {
+/* Footer Styles*/
+.foot {
+  font-size: .75em;
+  margin-top: 50px;
+  margin-bottom: 10px;
   text-align: center;
-  color:red;
-  /*border-top: 1px solid #333;
-  border-bottom: 1px solid #333;*/
-  padding: 15px 15px;
-  margin-top: 100px;
+  overflow: hidden;
 }
+.footer-sbts-logo {
+  width: 280px;
+  height: 50px;
+  margin-bottom: -40px;
+  margin-top: 50px;
+}
+
+/* Interactive Element Styles
+----------------------------------------------- */
 
 #search {
   display: block;
@@ -285,33 +234,32 @@ button:visited {
   outline: none;
   text-indent: 10px;
 }
-#searchButtons {
-  border-color: #d2002a;
-  color: #fff;
-  background-color: #d2002a;
-  border-radius: 6px;
-  display: inline;
-  outline: none;
-}
-#searchButtons:hover {
-  color: #fff;
-  border-color: #fff;
-  outline: none;
-}
-#searchButtons {
-  border-color: #d2002a;
-  color: #fff;
-  background-color: #d2002a;
-  border-radius: 6px;
-  display: inline;
-  outline: none;
-}
-#trainLink {
+.search-overlay {
   display: none;
-  text-align: center;
-  margin-left: 75px;
+  background-color: #d2002a;
+  float: center;
+  /*margin: 0px, 350px, 300px, 500px;*/
+  /*padding-bottom: 0px, 35px, 0px, 35px;*/
+  box-shadow: 1px 1px 1px .5px #888888;
+  border-radius: 5px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+  opacity: .9;
+  z-index: -1;
 }
-span .contactForm {
+
+/* Search Button - Currently Disabled */
+#searchButtons {
+  border-color: #d2002a;
+  color: #fff;
+  background-color: #d2002a;
+  border-radius: 6px;
+  display: inline;
+  outline: none;
+}
+
+/* Contact Form Styles */
+.contactForm {
   display: inline;
   list-style: none;
   float: center;
@@ -321,7 +269,7 @@ span .contactForm {
   z-index: 5;
   width: 100%:
 }
-span .contactForm input {
+.contactForm input {
   padding-bottom:  5px;
   display: inline;
   align-items: center;
@@ -333,8 +281,8 @@ span .contactForm input {
   padding: 7px 0px;
     margin: 0 0 10px 5px;
 }
-span .contactForm label {
-  margin: 0 0 5px 5px;
+.contactForm label {
+  margin: 0 5px;
   display: inline;
   align-items: center;
   background-color: white;
@@ -357,7 +305,29 @@ textarea {
   display: inline;
   outline: none;
 }
+
+/* Pseudo Classes
+----------------------------------------------- */
+
+button:hover {
+  color: #333;
+  border-color: #333;
+}
+
+/* Contact Form Button */
 #contactSubmitButton:hover {
+  color: #fff;
+  border-color: #fff;
+  outline: none;
+}
+
+/* Menu Hover Color */
+.menu li a:hover {
+  color: #d2002a;
+}
+
+/* Search Button - Currently Disabled */
+#searchButtons:hover {
   color: #fff;
   border-color: #fff;
   outline: none;
