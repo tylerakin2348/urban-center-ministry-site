@@ -9,63 +9,48 @@
   </head>
   <body>
     <header class="top-header">
-      <a href="index.html">
-        <img class="logo" src="assets/img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo"</img>
-      </a>
+      <div class="logo-container">
+        <a href="index.html">
+          <img class="logo" src="assets/img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo"</img>
+        </a>
+      </div>
       <button class="navButton">Navigation</button>
       <nav class="main-navigation">
         <ul class="menu">
           <li><a href="#about-header">About</a></li>
           <li><a href="#contact-header">Contact Us</a></li>
-          <li><a href="#resource-header">Resources</a></li>
-          <li><a href="#journal-header">Journal</a></li>
-          <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
-        </ul>
-      </nav>
-    </header>
-    <header class="topHeaderScroll">
-      <a href="index.html">
-        <img class="logoScroll" src="assets/img/Dehoney Center Logo2small.png"</img>
-      </a>
-      <button class="navButton">Navigation</button>
-      <nav class="mainNavigationScroll">
-        <ul class="menu">
-          <li><a href="#about-header">About</a></li>
-          <li><a href="#contact-header">Contact Us</a></li>
-          <li><a href="#resource-header">Resources</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="#journal-header">Journal</a></li>
           <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
         </ul>
       </nav>
     </header>
     <div class="home-picture">
-      <img class="homepage-pic"src="assets/img2/photo-1441960114565-066d7a7b544b.jpg" alt="City" />
+      <img class="homepage-pic"src="assets/img2/photo-1441960114565-066d7a7b544b.jpg" alt="Man entering city for ministry" />
     </div>
     <div class="pageContent">
+        <div class="PageColumnContent">
+          <div>
+            <h1 id="about-header">About</h1>
+            <section class="about" title="Picture of The Southern Baptist Theological Seminary">
+            </section>
+            <section class="contact-overlay">
+                <p>The Dehoney Center, in partnership with the Southern Baptist Theological Seminary, offers training in urban ministry and mission for every level of involvement and education.</p>
+            </section>
+            <h1 id="training-header">Training and Internships</h1>
+            <section class="training" title="Picture of city"></section>
+          </div>
+          <section class="training-overlay">
+              <p>If you’re working in an urban context, or even if you’re considering missions in the city, preparation is essential.</p>
+          </section>
+        </div>
       <section>
-        <h1 id="about-header">About</h1>
-        <section class="contact">
-        </section>
-        <section class="contact-overlay">
-            <p></p>
-        </section>
-        <p class="main-text">The Dehoney Center, in partnership with the Southern Baptist Theological Seminary, offers training in urban ministry and mission for every level of involvement and education.  From Boyce College undergraduate degrees to doctoral programs, we have something to sharpen your ministry.</p>
-      </section>
-      <h1 id="training-header">Training and Internships</h1>
-      <section class="training">
-      </section>
-      <section class="training-overlay">
-          <p>If you’re working in an urban context, or even if you’re considering missions in the city, preparation is essential.</p>
-      </section>
-      <section>
+        <button id="AjaxButton">Hello</button>
         <h1 id="resource-header">Resources</h1>
-        <p class="main-text">We have many resources related to missions, relating to urban missions in particualar, and specific people groups. <br />
+        <p class="main-page-text">We have many resources related to missions, relating to urban missions in particualar, and specific people groups. <br />
         Use the search bar to search for a particular subject, or browse our entire library.</p>
           <input id="search" type="search" placeholder="Search"></input>
-        <form action="resources.html" id="searchButtons"><input type="submit" value="Browse Resources"></form>
-        <!-- <button id="searchButton" href="file:///Users/Tyler/Desktop/urban-center-ministry-site/resources.html?">Browse Resources</button> -->
           <p class="search-overlay">Results matching search</p>
-
       </section>
       <h1 id="contact-header">Contact Us</h1>
       <section>
@@ -75,33 +60,25 @@
         Contact us for more information about our work, or about our Training and Internships.
       </p>
       <span>
-        <form class="contactForm" action="contact.html" method="post">
-          <li>
-             <label>Name</label>
-             <input type="text" title="Name" />
-          </li>
-          <li>
-             <label>Email</label>
-             <input type="text" title="Email" />
-          </li>
-          <li>
-             <label>Phone</label>
-             <input type="text" title="Phone" />
-          </li>
-          <li>
-             <label>Message</label>
-             <textarea type="text" title="Message"></textarea>
-          </li>
-          <input type="submit" id="contactSubmitButton"></input>
+        <div id="formData">
+        <form class="contactForm" method="post" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json" >
+          <ul v-for="contactFormInfo in formData">
+
+          </ul>
         </form>
+        </div>
       </span>
     </div>
-    <img class="sbts-logo" src="assets/img/SBTS-Logo.png"/>
-    <footer class="foot">
+    <img class="footer-sbts-logo" src="assets/img/SBTS-Logo.png" alt="The Southern Baptist Theological Seminary Logo"/>
+    <footer class="foot" href="http://sbts.edu">
     © 2016 The Southern Baptist Theological Seminary
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="data.js"></script>
-    <script src="assets/javascript/script.js"></script>
+      <script src="data.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+      <script src="assets/javascript/script.js"></script>
+      <script src="vue.js"></script>
+      <script src="assets/javascript/vueSite.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.js"></script>
+      <script src="https://raw.github.com/jiren/filter.js/master/filter.js" type="text/javascript"></script>
   </body>
   </html>
