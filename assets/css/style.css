@@ -11,6 +11,7 @@ body {
   font-family: "Sentinel SSm A","Sentinel SSm B",Georgia,"Times New Roman",Times,serif;
   position: relative;
   text-align: center;
+  overflow-x: hidden;
 }
 header {
   position: absolute;
@@ -25,8 +26,7 @@ header {
 
 h1 {
   text-align: center;
-  padding: 15px 15px;
-  margin: 15px 0 15px;
+  padding-top: 150px;
 }
 button {
   color: #d2002a;
@@ -38,9 +38,8 @@ button {
   margin: 80px 10px -50px -85px;
   display: inline;
   opacity: .7;
-  float: center;
+  float: right;
   overflow: hidden;
-  outline: inherit;
 }
 .main-page-text {
   color: #333
@@ -55,7 +54,7 @@ button {
 ----------------------------------------------- */
 
 .top-header {
-  margin: 0px -40px 0px 0px;
+  padding: 0px -100px 0px -100px;
   background-color: white;
   display: block;
   position: fixed;
@@ -63,6 +62,10 @@ button {
   border-bottom: 1px solid #333;
   box-shadow: 0 0 .5px rgba(0, 0, 0, 0.9);
   width: 100%;
+  height: 110px;
+}
+.PageColumnContent {
+  /*display: flex;*/
 }
 
 /* Logo Positioning */
@@ -117,7 +120,7 @@ button {
     display: inline-block;
     padding: 29px 24px 30px 24px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: .75em;
     color: #333;
 }
 #trainLink {
@@ -125,18 +128,29 @@ button {
   text-align: center;
   margin-left: 75px;
 }
+#about-header,
+#training-header {
+  margin-top: 75px;
+  text-align: center;
+}
+#resource-header {
+  padding: 50px;
+  margin-top: 450px;
+  display: block;
+}
 
 /* Main Page Photo */
 .homepage-pic {
   height: 100%;
-  background-image: src= "assets/img2/photo-1441960114565-066d7a7b544b.jpg"
-  border-radius: 4px;
+  background-image: url("assets/img2/photo-1441960114565-066d7a7b544b.jpg");
+  background-position: 50% 80%;
   min-height: 300px;
   min-width: 700px;
   margin-top: 104px;
   margin-bottom: -40px;
   /*margin: 200px 0;*/
   overflow: hidden;
+  clear: both;
 }
 
 /* Primary Sections of Page */
@@ -147,54 +161,60 @@ button {
   color: #333;
   padding: 200px;
   margin: 50px 0;
-  border-radius: 13px;
-  max-width: 100%
+  width: 100%;
+  height: 70%;
+  display: block;
+  float: left;
 }
 .training {
-  background-image: url(https://images.unsplash.com/photo-1443827187138-4e5e4e5ba78f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=465dd95097b5867a811e0ab0e48b4355);
+  background-image: url(https://images.unsplash.com/photo-1427694012323-fb5e8b0c165b?crop=entropy&dpr=2&fit=crop&fm=jpg&h=600&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300);
   background-color: #d2002a;
   color: #333;
   padding: 200px;
-  margin: 50px 0;
-  border-radius: 13px;
-  max-width: 75%;
+  /*margin: 50px 0;*/
+  width: 100%;
+  display: block;
 }
 
 /* Overlays for Primary Sections */
 .contact-overlay {
   display: inline;
   background-color: #d2002a;
+  position: relative;
   float: right;
   margin: -460px 150px 0px 700px;
-  padding-bottom: 52px;
-  padding-top: 75px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding: 52px 95px;
   box-shadow: 1px 1px 1px .5px #888888;
   border-radius: 5px;
-  font-size: 1.3em;
-  line-height: 1.3;
+  font-size: 1.4em;
+  line-height: 1.3em;
   opacity: 0.9;
+  z-index: 0;
+  max-height: 432px;
+  min-width: 409px;
 }
 .training-overlay {
   display: inline;
   background-color: #d2002a;
   float: right;
   position: relative;
-  margin: -460px 150px 0px 700px;
-  padding: 42px 35px 44px 35px;
+  margin: -400px 150px 0px 700px;
+  padding: 20px 95px;
   box-shadow: 1px 1px 1px .5px #888888;
   border-radius: 5px;
   font-size: 1.3em;
   line-height: 1.3em;
   opacity: 0.9;
   z-index: 0;
+  height: 405px;
+  width: 296px;
+  /*max-height: 435px;*/
 }
 .contact-overlay, .training-overlay p {
   text-align: center;
-  margin: 0 25px;
   color: white;
   border-radius: 4px;
+  padding: 0px -20px;
   font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
 }
 
@@ -255,31 +275,40 @@ button {
   background-color: #d2002a;
   border-radius: 6px;
   display: inline;
-  outline: none;
 }
 
 /* Contact Form Styles */
-.contactForm {
-  display: inline;
+.contactForm ul {
   list-style: none;
   float: center;
   margin-bottom: 0px;
   margin-right: 20px;
   position: relative;
   z-index: 5;
-  width: 100%:
+  width: 100%;
+  text-decoration: none;
 }
 .contactForm input {
-  padding-bottom:  5px;
-  display: inline;
   align-items: center;
   background-color: white;
   z-index: 5;
   width: 60%;
   border: 1px solid #5e5e5e;
   border-radius: 3px;
-  padding: 7px 0px;
-    margin: 0 0 10px 5px;
+  padding: 7px 0 7px 10px;
+  margin: 0 0 10px 5px;
+  flex-grow: 2;
+}
+.contactForm textarea {
+  align-items: center;
+  background-color: white;
+  z-index: 5;
+  width: 60%;
+  border: 1px solid #5e5e5e;
+  border-radius: 3px;
+  padding: 7px 0 7px 10px;
+  margin: 0 15px 10px 5px;
+  flex-grow: 2;
 }
 .contactForm label {
   margin: 0 5px;
@@ -303,8 +332,11 @@ textarea {
   background-color: #d2002a;
   border-radius: 6px;
   display: inline;
-  outline: none;
 }
+/*#formData {
+  display: flex;
+  height: 500px;
+}*/
 
 /* Pseudo Classes
 ----------------------------------------------- */
@@ -318,7 +350,6 @@ button:hover {
 #contactSubmitButton:hover {
   color: #fff;
   border-color: #fff;
-  outline: none;
 }
 
 /* Menu Hover Color */

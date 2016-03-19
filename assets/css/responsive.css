@@ -21,11 +21,11 @@
 
 @media screen and (min-width: 800px) {
   .top-header {
-      /*padding: 0px -100px 0px -100px;*/
+      padding: 0px -100px 0px -100px;
   }
   .main-navigation {
     display: inline;
-    margin: 0;
+    margin: -94px 30px 0px 100px;
     padding: 0;
   }
   .menu {
@@ -34,6 +34,13 @@
     margin: 97px 20px 9px 95px;
     position: relative;
     font-size: 1.3em;
+  }
+  .homepage-pic {
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: -100px;
+    /*margin: 200px 0;*/
+    overflow: hidden;
   }
   button {
     display: none;
@@ -62,18 +69,16 @@
   }
   .homepage-pic {
     width: 100%;
-    margin-top: 77px;
+    margin-top: 70px;
     margin-bottom: -100px;
     /*margin: 200px 0;*/
     overflow: hidden;
   }
   .training {
-    color: #333;
+    /*color: #333;
     padding: 200px 450px;
-    margin: 50px 100px;
-    border-radius: 13px;
-    max-width: 100%;
-  }
+    margin: 50px 0px;
+  }*/
   .training-overlay {
     padding-bottom: 110px;
     padding-top: 115px;
@@ -83,12 +88,5 @@
     padding-bottom: 203px;
     padding-top: 115px;
     font-size: 1.5em;
-  }
-  #about-header {
-    text-align: center;
-    /*border-top: 1px solid #333;
-    border-bottom: 1px solid #333;*/
-    padding: 200px 50px 50px 50px;
-    margin-top: 100px;
   }
 }

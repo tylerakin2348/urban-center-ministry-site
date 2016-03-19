@@ -2,7 +2,7 @@ new Vue({
   el: '#formData',
   data: {
     contactFormInfo: [
-      <li> label for="contactName">Name</label>
+      <li label for="contactName">Name</label>
          <input id="contactName" type="text" title="Name" required/>
       </li>
       <li>
@@ -17,7 +17,7 @@ new Vue({
          <label for="contactMessage">Message</label>
          <textarea id="contactMessage" type="text" title="Message"></textarea>
       </li>
-      <input ontype="submit" id="contactSubmitButton" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json"></input>
+      <button ontype="submit" id="contactSubmitButton" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json"></button>
     ]
   }
 },

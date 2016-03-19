@@ -22,6 +22,7 @@
           <li><a href="resources.html">Resources</a></li>
           <li><a href="#journal-header">Journal</a></li>
           <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
+          <li id="aboutSouthern"><a href="aboutSouthern.html">About Southern</a></li>
         </ul>
       </nav>
     </header>
@@ -37,13 +38,6 @@
             <section class="contact-overlay">
                 <p>The Dehoney Center, in partnership with the Southern Baptist Theological Seminary, offers training in urban ministry and mission for every level of involvement and education.</p>
             </section>
-            <h1 id="training-header">Training and Internships</h1>
-            <section class="training" title="Picture of city"></section>
-          </div>
-          <section class="training-overlay">
-              <p>If you’re working in an urban context, or even if you’re considering missions in the city, preparation is essential.</p>
-          </section>
-        </div>
       <section>
         <button id="AjaxButton">Hello</button>
         <h1 id="resource-header">Resources</h1>
@@ -52,6 +46,13 @@
           <input id="search" type="search" placeholder="Search"></input>
           <p class="search-overlay">Results matching search</p>
       </section>
+      <h1 id="training-header">Training and Internships</h1>
+      <section class="training" title="Picture of city"></section>
+    </div>
+    <section class="training-overlay">
+        <p>If you’re working in an urban context, or even if you’re considering missions in the city, preparation is essential.</p>
+    </section>
+  </div>
       <h1 id="contact-header">Contact Us</h1>
       <section>
         <p>We are passionate about the gospel going forth in our city and others around the world</p>
@@ -63,7 +64,23 @@
         <div id="formData">
         <form class="contactForm" method="post" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json" >
           <ul v-for="contactFormInfo in formData">
-
+            <li>
+              <label for="contactName">Name</label>
+               <input id="contactName" type="text" title="Name" required/>
+            </li>
+            <li>
+               <label for="contactEmail">Email</label>
+               <input id="contactEmail" v-if="" type="text" title="Email" required/>
+            </li>
+            <li>
+               <label for="contactPhone">Phone</label>
+               <input id="contactPhone" type="text" title="Phone" />
+            </li>
+            <li>
+               <label for="contactMessage">Message</label>
+               <textarea id="contactMessage" type="text" title="Message"></textarea>
+            </li>
+            <input type="submit" id="contactSubmitButton" title="Submit" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json"></input>
           </ul>
         </form>
         </div>

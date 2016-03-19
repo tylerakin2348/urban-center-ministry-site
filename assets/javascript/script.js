@@ -1,6 +1,18 @@
 var searchValue = $("#search").val();
 
-// Navigation Menu Functionality
+$.ajax({
+    url:'https://api.instagram.com/v1/users/196756729/media/recent/?access_token=196756729.43505f7.bc26468655ad47979220f2a18f3fc6c0',
+    dataType:'jsonp',
+    jsonp:'callback',
+    success: function (data) {
+      var sbtsimages = data.data;
+        for(i = 0; i < sbtsimages.length; i +=1) {
+          $('#aboutSouthern').append('<img src="' + Object[i].data.images.thumbnail.url + '" />');
+          console.log(data);
+        }
+    }
+});
+// Desktop Navigation Menu Functionality
 var scrollStatus = false;
 
 $(window).scroll(function() {
@@ -34,7 +46,7 @@ $(window).scroll(function() {
   }
 });
 
-
+// Mobile Navigation Menu Functionality
 $(".navButton").click(function() {
   if ( $(".main-navigation").is(":hidden") ) {
   $(".main-navigation").slideDown("slow");
@@ -43,123 +55,77 @@ $(".navButton").click(function() {
 }
 });
 
-$(".navButton").click(function() {
-  if ( $(".mainNavigationScroll").is(":hidden") ) {
-  $(".mainNavigationScroll").slideDown("slow");
-} else {
-  $(".mainNavigationScroll").slideUp("fast");
-}
-});
-
-//Search Form Request
+// Search Form AJAX Request
 $( "#search" ).keyup(function() {
   searchValue = $("#search").val();
-    var found = $.grep(data.author, function(resource) {
-        return data.author === searchValue;
-    });
-    if(searchValue = data.author ){
-      $(".search-overlay").show();
-    } else  {
-      $(".search-overlay").hide();
+    if(searchValue === data.resources[0].author){
+      alert(data.resources[0].author);
+    } else {
+      if(searchValue === data.resources[0].category){
+        alert(data.resources[0].category);
+      }
     }
   });
 
+  // Contact Form Submit Request
+  $(document).ready(function() {
+    $(".contactForm").submit(function(evt) {
+      evt.preventDefault();
+      var url = ("https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/data.json");
+      var formData = $(".contactForm").val();
+      $.post(url, formData, function(response) {
+        console.log(response);
+        alert("Successful Submission!");
+      });
+    }); // end submit
+  });
+
+  $(document).ready(function() {
+    $("#AjaxButton").show();
+    $("#AjaxButton").click(function(evt) {
+      evt.preventDefault();
+      var url = ("https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/data.json");
+      var formData = $("url");
+      $.getJSON(url, formData, function(data) {
+        // $.each(formData, function(success, data) {
+        //
+        // });
+        console.log(data);
+      });
+    }); // end submit
+  });
+
+//Search Interactivity
+  $(document).ready(function() {
+    var url = ("https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/data.json");
+    var searchData = $("url");
+
+    $( "#search" ).keyup(function() {
+
+      $.getJSON(url, searchData, function(searchResult) {
+        // $.each(formData, function(success, data) {
+        //
+        // });
+        console.log(searchResult);
+        });
+      });
+    }); // end submit
+
   //Contact Form Submit Request
-  $(function() {
-    // submit.preventDefault();
-    var contactValue = $(".contactForm");
-    var formData = $("formData");
-    var formDataList = "";
-    $("form").submit(function(event) {
-      // Stop the browser from submitting the form.
-      event.preventDefault();
-      var formDataList = $("form").serialize();
-    });
-    $.ajax({
-      type: "POST",
-      url: $("form").attr("action"),
-      data: "formDataList"
-    })
-    .done(function() {
-      //alert(formDataList.author);
-    })
-});
-
-
-
-  //   var data = {
-  //
-  //   }
-  //   $.get("https://github.com/tylerakin2348/urban-center-ministry-site/blob/master/contactInfo.json", contactSubmitButton, "Success")
-  //
-  // $.getJSON("https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/data.json", function( response ) {
-  //   var data;
-  //   data = rsesponse;
-  // });
-
-
-
-
-
-
-  // $(".contact").append(".contactForm");
-  //
-  // $("#searchButton").click(function() {
-  //
-  // });
-  // $("form").onclick
-//   $(window).bind('scroll', function () {
-//     if ($(window).scrollTop() > 100) {
-//         $('.menu').addClass('fixed');
-//     } else {
-//         $('.menu').removeClass('fixed');
-//     }
-// });
-
-
-  // $.getJSON("data.json", function(json) {
-  //   console.log("JSON Data: " + data.json[0].name);
-  // });
-
-
-  // $.getJSON("data.json", function (data) {
-  //   $.each(data, function (index, source) {
-  //     if (source.author === ("#search").val()
-  // });
-
-
-// searchValue = $("#search").val();
-// });
-// $( "#search" ).keyup(function() {
-//   console.log(searchValue)
-// });
-//
-//
-// $( "#search" ).keyup(function() {
-
-// $("button").click(function() {
-//   $(".main-navigation").toggle();
-// });
-
-
-
-
-
-
-// var responsiveMenu = ["About", " Contact Us"]
-// $(".menu").append(responsiveMenu);
-
-
-
-
-
-
-// $("#search").submit(function() {
-//   if
-// });
-
-
-// $(".menu a").click(function(event) {
-//   var href = $(this).attr("href");
-//   console.log(href);
+    // // submit.preventDefault();
+    // var contactValue = $(".contactForm");
+    // var formData = $("formData");
+    // var formDataList = "";
+    // $("form").submit(function(event) {
+    //   // Stop the browser from submitting the form.
+    //   event.preventDefault();
+    //   var formDataList = $("form").serialize();
+    // });
+    // $.ajax({
+    //   type: "POST",
+    //   url: $("form").attr("action"),
+    //   data: "formDataList"
+    // })
+    // .done(function() {
+    //   //alert(formDataList.author);
 // });
