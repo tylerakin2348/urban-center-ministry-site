@@ -18,8 +18,8 @@
       <nav class="main-navigation">
         <ul class="menu">
           <li><a href="#about-header">About</a></li>
-          <li><a href="#contact-header">Contact Us</a></li>
           <li><a href="resources.html">Resources</a></li>
+          <li><a href="#contact-header">Contact Us</a></li>
           <li><a href="#journal-header">Journal</a></li>
           <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
           <li id="aboutSouthern"><a href="aboutSouthern.html">About Southern</a></li>
@@ -27,7 +27,7 @@
       </nav>
     </header>
     <div class="home-picture">
-      <img class="homepage-pic"src="assets/img2/photo-1441960114565-066d7a7b544b.jpg" alt="Man entering city for ministry" />
+      <img class="homepage-pic"src="assets/img/photo-1441960114565-066d7a7b544b.jpg" alt="Man entering city for ministry" />
     </div>
     <div class="pageContent">
         <div class="PageColumnContent">
@@ -69,7 +69,7 @@
                <input id="contactName" type="text" title="Name" required/>
             </li>
             <li>
-               <label for="contactEmail">Email</label>
+               <label v-if=""for="contactEmail">Email</label>
                <input id="contactEmail" v-if="" type="text" title="Email" required/>
             </li>
             <li>
@@ -81,14 +81,16 @@
                <textarea id="contactMessage" type="text" title="Message"></textarea>
             </li>
             <input type="submit" id="contactSubmitButton" title="Submit" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json"></input>
+            <p class="contactResponse">Thanks for contacting us!</p>
           </ul>
         </form>
         </div>
       </span>
     </div>
     <img class="footer-sbts-logo" src="assets/img/SBTS-Logo.png" alt="The Southern Baptist Theological Seminary Logo"/>
-    <footer class="foot" href="http://sbts.edu">
-    © 2016 The Southern Baptist Theological Seminary
+    <footer href="http://sbts.edu">
+    <p class="foot">© 2016 The Southern Baptist Theological Seminary</p>
+    <p class="bottomFooter"></p>
     </footer>
       <script src="data.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
