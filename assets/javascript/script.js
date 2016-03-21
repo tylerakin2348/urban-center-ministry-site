@@ -1,17 +1,19 @@
 var searchValue = $("#search").val();
+// var ajaxCall = function(ajaxCall) {
+  $.ajax({
+      url:'https://api.instagram.com/v1/users/196756729/media/recent/?access_token=196756729.43505f7.bc26468655ad47979220f2a18f3fc6c0',
+      dataType:'jsonp',
+      jsonp:'callback',
+      success: function (data) {
+        var sbtsimages = data.data;
+          for(i = 0; i < sbtsimages.length; i +=1) {
+            $('#aboutSouthern').append('<img src="' + Object[i].object.images.thumbnail.url + '" />');
+            console.log(data);
+          }
+      }
+  });
 
-$.ajax({
-    url:'https://api.instagram.com/v1/users/196756729/media/recent/?access_token=196756729.43505f7.bc26468655ad47979220f2a18f3fc6c0',
-    dataType:'jsonp',
-    jsonp:'callback',
-    success: function (data) {
-      var sbtsimages = data.data;
-        for(i = 0; i < sbtsimages.length; i +=1) {
-          $('#aboutSouthern').append('<img src="' + Object[i].data.images.thumbnail.url + '" />');
-          console.log(data);
-        }
-    }
-});
+
 // Desktop Navigation Menu Functionality
 var scrollStatus = false;
 
@@ -74,8 +76,7 @@ $( "#search" ).keyup(function() {
       var url = ("https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/data.json");
       var formData = $(".contactForm").val();
       $.post(url, formData, function(response) {
-        console.log(response);
-        alert("Successful Submission!");
+      $("#contactSubmitButton").hide();
       });
     }); // end submit
   });
