@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 header {
-  position: absolute;
+  position: relative;
 }
 .main-text {
   color: 333;
@@ -27,6 +27,13 @@ header {
 h1 {
   text-align: center;
   padding-top: 150px;
+}
+h3 {
+  color: #333;
+  padding: 0 50px;
+  text-align: center;
+  line-height: 1.3em;
+  font-weight: 200;
 }
 button {
   color: #d2002a;
@@ -75,7 +82,9 @@ button {
     padding: 20px;
     position: fixed;
     background: #fff;
+    margin-top:3px;
     margin-left: 20px;
+    z-index: 1;
 }
 .logo-container:after {
     content: "";
@@ -87,54 +96,61 @@ button {
     border-left: 1px solid #333;
     border-bottom:1px solid #333;
     height: 87px;
+    z-index: 1;
 }
 .logo {
   height: 120px;
+  z-index: 1;
 }
 
 /* Menu Styles */
 .main-navigation {
   display: none;
-  margin: 0px 50px 0px 0px;
-  padding-right: 25px;
-  color: black;
+  position: absolute;
+  right: 0px;
+  margin: 80px 0px 0px 220px;
+  padding: 0px 25px 0px 0px;
   overflow: hidden;
-  background-color: #fff;
-  width: 50%;
+  background-color: #333;
+  width: 206px;
 }
 .menu {
   display: inline;
   font-weight: 300;
-  /*margin: 33px -10px 30px -10px;*/
-  padding-bottom: -80px;
+  padding: 0px 0px -80px 30px;
   float: right;
   list-style: none;
   z-index: 2;
 }
-.menu li {
+.menu li:nth-child(2n + 1) {
   float: left;
+  color: green;
 }
-.menu li a {
+.menu li a:nth-child(1n + 1) {
     float: left;
     display: inline-block;
     padding: 29px 24px 30px 24px;
     text-decoration: none;
     font-size: .75em;
-    color: #333;
+    color: #fff;
 }
 #trainLink {
-  display: none;
+  display: inline;
   text-align: center;
-  margin-left: 75px;
+  margin-left: 0px;
 }
-#about-header,
-#training-header {
+#about-header {
   margin-top: 75px;
+  text-align: center;
+}
+#training-header {
+  margin-top: -30px;
+  margin-bottom: 75px;
   text-align: center;
 }
 #resource-header {
   padding: 150px 0 40px 0;
-  margin-top: 450px;
+  margin-top: 150px;
   display: block;
 }
 #contact-header {
@@ -143,37 +159,47 @@ button {
 .nav-button {
   outline: none;
   border: none;
+  button {
+  color: #d2002a;
+  background-color: white;
+  border: 1px solid #d2002a;
+  border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 40px 10px -50px -85px;
+  display: inline;
+  opacity: .7;
+  float: right;
+  overflow: hidden;
+}
 }
 /* Main Page Photo */
 .homepage-pic {
-  height: 50%;
-  background-image: url("assets/img/photo-1441960114565-066d7a7b544b.jpg");
-  background-position: 90% 80%;
   height: 300px;
-  width: 700px;
   margin-top: 80px;
+  margin-left: -220px;
   margin-bottom: -40px;
   /*margin: 200px 0;*/
   overflow: hidden;
   clear: both;
-  width: 100%;
 }
 
 /* Primary Sections of Page */
 .about {
-  background-image: url(http://www.sbts.edu/wp-content/uploads/2015/02/More-about-Southern.jpg);
+  background-image: url("/Users/Tyler/Desktop/urban-center-ministry-site/assets/img/More-about-Southern.jpg");
   background-color: #d2002a;
   background-position: 50% 5%;
   color: #333;
   padding: 200px;
-  margin: 50px 0;
+  margin: 50px 20px 140px 0px;
+  margin-bottom: 140px;
   width: 100%;
   height: 70%;
   display: block;
   float: left;
 }
 .training {
-  background-image: url(https://images.unsplash.com/photo-1427694012323-fb5e8b0c165b?crop=entropy&dpr=2&fit=crop&fm=jpg&h=600&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300);
+  background-image: url("/Users/Tyler/Desktop/urban-center-ministry-site/assets/img/photo-1427694012323-fb5e8b0c165b.jpg");
   background-color: #d2002a;
   color: #333;
   padding: 200px;
@@ -185,19 +211,19 @@ button {
 /* Overlays for Primary Sections */
 .contact-overlay {
   display: inline;
-  background-color: #d2002a;
+  background-color: rgb(210, 0, 42);
   position: relative;
   float: right;
-  margin: -460px 150px 0px 700px;
-  padding: 52px 95px 52px 95px;
-  box-shadow: 1px 1px 1px .5px #888888;
-  border-radius: 5px;
-  font-size: 1.4em;
-  line-height: 1.3em;
+  box-shadow: rgb(136, 136, 136) 1px 1px 1px 0.5px;
+  font-size: 1.2em;
+  line-height: 1.4em;
   opacity: 0.9;
   z-index: 0;
-  max-height: 432px;
-  min-width: 409px;
+  max-height: 406px;
+  width: 309px;
+  margin: -540px 45px -20px 700px;
+  padding: 32px 35px;
+  border-radius: 5px;
 }
 .training-overlay {
   display: inline;
@@ -223,7 +249,33 @@ button {
   padding: 0px -20px;
   font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
 }
-
+#aboutSouthernPhotos img {
+  display: inline;
+  margin: 50px 0 -30px 0;
+  padding: 5px 50px 50px 50px;
+  height: 15.5em;
+}
+.showPhotoButton {
+  display: inline-block;
+  margin: 50px auto;
+}
+.visitSouthern {
+  color: #d2002a;
+  background-color: white;
+  border: 1px solid #d2002a;
+  border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 60px;
+  display: inline-block;
+  opacity: .7;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+}
 /* Footer Styles*/
 .foot {
   font-size: .75em;
@@ -293,7 +345,6 @@ button {
   margin-bottom: 0px;
   margin-right: 20px;
   position: relative;
-  z-index: -5;
   width: 100%;
   text-decoration: none;
 }
@@ -354,6 +405,10 @@ button:hover {
   color: #333;
   border-color: #333;
 }
+.visitSouthern:hover {
+  background-color: #d3002a;
+  color: #fff;
+}
 
 /* Contact Form Button */
 #contactSubmitButton:hover {
@@ -371,4 +426,7 @@ button:hover {
   color: #fff;
   border-color: #fff;
   outline: none;
+}
+.username-field {
+  padding-right: -20px;
 }

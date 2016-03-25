@@ -11,66 +11,58 @@
     <header class="top-header">
       <div class="logo-container">
         <a href="index.html">
-          <img class="logo" src="assets/img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo"</img>
+          <img class="logo" src="assets/img/Dehoney Center Logosmall.png" alt="Dehoney Center Logo" </img>
         </a>
       </div>
-      <button class="navButton">Navigation</button>
+      <button @click="toggleMenu" class="navButton">Navigation</button>
       <nav class="main-navigation">
         <ul class="menu">
           <li><a href="#about-header">About</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="#contact-header">Contact Us</a></li>
-          <li><a href="#journal-header">Journal</a></li>
           <li id="trainLink"><a href="#training-header">Training and Internships</a></li>
-          <li id="aboutSouthern"><a href="aboutSouthern.html">About Southern</a></li>
+          <li><a href="#contact-header">Contact Us</a></li>
         </ul>
       </nav>
     </header>
     <div class="home-picture">
-      <img class="homepage-pic"src="assets/img/photo-1441960114565-066d7a7b544b.jpg" alt="Man entering city for ministry" />
+      <img class="homepage-pic" src="assets/img/photo-1441960114565-066d7a7b544b.jpg" alt="Man entering city for ministry" />
     </div>
-    <div class="pageContent">
-        <div class="PageColumnContent">
-          <div>
-            <h1 id="about-header">About</h1>
-            <section class="about" title="Picture of The Southern Baptist Theological Seminary">
-            </section>
-            <section class="contact-overlay">
-                <p>The Dehoney Center, in partnership with the Southern Baptist Theological Seminary, offers training in urban ministry and mission for every level of involvement and education.</p>
-            </section>
+    <div class="PageColumnContent">
+      <h1 id="about-header">About</h1>
+      <section class="about" title="Picture of The Southern Baptist Theological Seminary">
+      </section>
+      <section class="contact-overlay">
+        <p>The Dehoney Center, in partnership with the Southern Baptist Theological Seminary, offers training in urban ministry and mission for every level of involvement and education.</p>
+        <button @click="togglePhotos" class="showPhotoButton">About Southern</button>
+      </section>
+      <section id="aboutSouthernPhotos">
+        <h3>Founded in 1859, The Southern Baptist Theological Seminary is the oldest of the seminaries of the Southern Baptist Convention. Enrolling more than 4,000 students annually, Southern Seminary ranks as one of the largest seminaries in the world. <br /> <br />The Southern Baptist Theological Seminary stands on the confessional vision articulated by the founding faculty in the Abstract of Principles and on the Baptist Faith and Message.</h3>
+      </section>
       <section>
-        <button id="AjaxButton">Hello</button>
-        <h1 id="resource-header">Resources</h1>
-        <p class="main-page-text">We have many resources related to missions, relating to urban missions in particualar, and specific people groups. <br />
-        Use the search bar to search for a particular subject, or browse our entire library.</p>
-          <input id="search" type="search" placeholder="Search"></input>
-          <p class="search-overlay">Results matching search</p>
+        <a href='http://www.sbts.edu/' class="visitSouthern">Visit sbts.edu for More Information</a>
       </section>
       <h1 id="training-header">Training and Internships</h1>
-      <section class="training" title="Picture of city"></section>
-    </div>
-    <section class="training-overlay">
+      <section class="training" title="Picture of city">
+      </section>
+      <section class="training-overlay">
         <p>If you’re working in an urban context, or even if you’re considering missions in the city, preparation is essential.</p>
-    </section>
-  </div>
+      </section>
+    </div>
       <h1 id="contact-header">Contact Us</h1>
       <section>
         <p>We are passionate about the gospel going forth in our city and others around the world</p>
       </section>
-      <p>
-        Contact us for more information about our work, or about our Training and Internships.
-      </p>
-      <span>
-        <div id="formData">
-        <form class="contactForm" method="post" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json" >
-          <ul v-for="contactFormInfo in formData">
+      <p>Contact us for more information about our work, or about our Training and Internships.</p>
+    <span>
+      <div>
+        <form class="contactForm" method="post" @submit.prevent action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json" >
+          <ul>
             <li>
               <label for="contactName">Name</label>
-               <input id="contactName" type="text" title="Name" required/>
+              <input id="contactName" type="text" title="Name" required/>
             </li>
             <li>
-               <label v-if=""for="contactEmail">Email</label>
-               <input id="contactEmail" v-if="" type="text" title="Email" required/>
+               <label for="contactEmail">Email</label>
+               <input id="contactEmail" type="text" title="Email" required/>
             </li>
             <li>
                <label for="contactPhone">Phone</label>
@@ -81,23 +73,21 @@
                <textarea id="contactMessage" type="text" title="Message"></textarea>
             </li>
             <input type="submit" id="contactSubmitButton" title="Submit" action="https://raw.githubusercontent.com/tylerakin2348/urban-center-ministry-site/master/contactInfo.json"></input>
-            <p class="contactResponse">Thanks for contacting us!</p>
           </ul>
         </form>
-        </div>
+      </div>
       </span>
     </div>
-    <img class="footer-sbts-logo" src="assets/img/SBTS-Logo.png" alt="The Southern Baptist Theological Seminary Logo"/>
+    <img class="footer-sbts-logo" src="assets/img/SBTS-Logo.png" alt="The Southern Baptist Theological Seminary Logo" />
     <footer href="http://sbts.edu">
-    <p class="foot">© 2016 The Southern Baptist Theological Seminary</p>
-    <p class="bottomFooter"></p>
+      <p class="foot">© 2016 The Southern Baptist Theological Seminary</p>
+      <a href="index.html" class="button">Back to Top</a>
+      <p class="bottomFooter"></p>
     </footer>
-      <script src="data.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-      <script src="assets/javascript/script.js"></script>
-      <script src="vue.js"></script>
-      <script src="assets/javascript/vueSite.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.js"></script>
-      <script src="https://raw.github.com/jiren/filter.js/master/filter.js" type="text/javascript"></script>
+    <script src="data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/scripts.js/vue.js"></script>
+    <script src="assets/javascript/vueSite.js"></script>
   </body>
-  </html>
+</html>
